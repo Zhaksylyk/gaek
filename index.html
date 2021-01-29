@@ -27,7 +27,33 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk4UdmywCCh4Ob8pWZQt-oL0M7gxPfxCY&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
-    <script src="assets/js/map.js"></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+
+        const uluru = { lat: 42.4149312, lng: 69.824924,694 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
   </head>
 
   <body>
@@ -47,12 +73,7 @@
               <li><a href="#section3">What we do?</a></li>
               <li><a href="#section3">How it works?</a></li>
               <li>
-                <a
-                  href="https://templatemo.com/about"
-                  rel="sponsored"
-                  class="external"
-                  >External URL</a
-                >
+                <a href="#" rel="sponsored" class="external">External URL</a>
               </li>
             </ul>
           </li>
@@ -61,16 +82,16 @@
           <!-- <li><a href="#section5">Video</a></li> -->
           <li><a href="#section6">Студенттік өмір</a></li>
           <li>
-            <a href="https://templatemo.com" class="external">Серіктестер</a>
+            <a href="#" class="external">Серіктестер</a>
           </li>
           <li>
-            <a href="https://templatemo.com" class="external">GAEKSKILLS</a>
+            <a href="#" class="external">GAEKSKILLS</a>
           </li>
           <li>
-            <a href="https://templatemo.com" class="external">Талапкер</a>
+            <a href="#" class="external">Талапкер</a>
           </li>
           <li>
-            <a href="https://templatemo.com" class="external">ҚОТ</a>
+            <a href="#" class="external">ҚОТ</a>
           </li>
         </ul>
       </nav>
@@ -250,7 +271,7 @@
                         information, you shall
                         <a
                           rel="nofollow"
-                          href="https://templatemo.com/contact"
+                          href="#"
                           target="_parent"
                           >contact TemplateMo</a
                         >
@@ -565,7 +586,7 @@
                 platform such as WordPress. You may
                 <a
                   rel="nofollow"
-                  href="https://templatemo.com/contact"
+                  href="#"
                   target="_parent"
                   >contact TemplateMo</a
                 >
@@ -632,8 +653,7 @@
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/lightbox.js"></script>
